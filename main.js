@@ -72,23 +72,21 @@ function drawCanva(){
 
 //Draw the balls
 function drawBalls(){
-
+    
     //draw the ball
     for (let i = 0; i < balls.length; i++) {
-        
+        var img=new Image();
+        img.src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
+        img.onload=function(){
+            var pattern = ctx.createPattern(this, "repeat");
+            ctx.fillStyle = pattern;
+            ctx.fill();
+        }
         ctx.beginPath();
         ctx.arc(balls[i].x, balls[i].y, balls[i].radius, 0, Math.PI * 2, false);
+        ctx.closePath();
         ctx.stroke();
 
-        console.log("Radius->"+balls[i].radius);
-        
-        console.log("PositionY->"+balls[i].x);
-
-        console.log("PositionX->"+balls[i].y);
-
-        console.log("speedX->"+balls[i].speed_x);
-        
-        console.log("speedY->"+balls[i].speed_y);
     }   
 
 }
