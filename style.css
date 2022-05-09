@@ -1,0 +1,41 @@
+body{
+    /* Make the background a black color*/
+    background: linear-gradient(to left, #e97ee3 0%, #00bcd4 100%);
+}
+
+.title{
+    /* center align */
+    text-align: center;
+}
+
+#title-container {
+    width: 100%;
+    text-align:center;
+}
+
+#title {
+    font-size: 50px;;
+}
+
+#button-container {
+    /* make a square 50x50 */
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    text-align:center;
+    background: linear-gradient(to left, #e97ee3 0%, #00bcd4 100%);
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+#canvas-container {
+    width: 100%;
+    text-align:center;
+ }
+
+canvas {
+    display: inline;
+}
